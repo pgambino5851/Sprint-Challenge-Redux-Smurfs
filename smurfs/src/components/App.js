@@ -36,6 +36,7 @@ class App extends Component {
   addSmurf = e => {
     e.preventDefault();
     this.props.addSmurf(this.state.newSmurf);
+    this.props.getSmurfs();
     this.setState({
       newSmurf: {
         name: '',
@@ -63,7 +64,7 @@ class App extends Component {
             />
             <div />
             <input
-            type="text"
+            type="number"
             name="age"
             value={this.state.newSmurf.age}
             placeholder="Age...."
